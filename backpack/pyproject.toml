@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "backpack"
+version = "0.1.0"
+description = "A RAG (Retrieval-Augmented Generation) application for local document processing and querying"
+authors = ["victusfate"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+faiss-cpu = "^1.7.2"
+numpy = "2.0.1"
+sentence-transformers = "^2.2.0"
+transformers = "^4.20.0"
+torch = "^2.4.0"
+tqdm = "^4.62.3"
+beautifulsoup4 = "^4.10.0"
+requests = "^2.26.0"
+scikit-learn = "^1.0.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+black = "^21.12b0"
+flake8 = "^4.0.1"
+mypy = "^0.910"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

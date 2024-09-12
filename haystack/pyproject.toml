@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "haystack-rag"
+version = "0.1.0"
+description = "quick haystack rag example"
+authors = ["victusfate <messel@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+haystack-ai = "^2.4.0"
+transformers = "^4.44.0"
+torch = "^2.4.0"
+sentence-transformers = "^3.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

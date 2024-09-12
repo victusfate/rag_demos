@@ -123,7 +123,7 @@ if __name__ == "__main__":
 
     vector_store = SimpleVectorStore()
 
-    url = 'https://www.gutenberg.org/cache/epub/8001/pg8001-images.html'
+    url = 'https://www.gutenberg.org/cache/epub/10/pg10.txt'
     print(f"Fetching and processing text from {url}")
     text = fetch_and_process_text(url)
     vector_store.add_text(text)
